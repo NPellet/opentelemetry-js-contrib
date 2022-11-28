@@ -65,7 +65,6 @@ import {
   TriggerOrigin,
 } from './internal-types';
 import { strict } from 'assert';
-import { LambdaModule } from './internal-types';
 import { pubsubPropagation } from '@opentelemetry/propagation-utils';
 import { SQS } from 'aws-sdk';
 
@@ -291,7 +290,7 @@ export class AwsLambdaInstrumentation extends InstrumentationBase {
             LowerCase<SQS.Message> /* | SNS.Message */
           >({
             messages: event.Records as Array<LowerCase<SQS.Message>>,
-            parentContext: trace.setSpan(otelContext.active(), span),
+            parentContext: trace.setSpan(otelContext.active(), lambdaSpan),
             tracer: plugin.tracer,
             messageToSpanDetails: (message: LowerCase<SQS.Message>) => {
               console.log(
