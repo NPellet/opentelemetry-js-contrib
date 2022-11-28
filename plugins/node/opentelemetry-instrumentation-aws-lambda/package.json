@@ -61,8 +61,8 @@
   },
   "dependencies": {
     "@opentelemetry/instrumentation": "^0.32.0",
-    "@opentelemetry/propagation-utils": "^0.29.1",
-    "@opentelemetry/propagator-aws-xray": "^1.1.1",
+    "@opentelemetry/propagation-utils": "https://gitpkg.now.sh/NPellet/opentelemetry-js-contrib/packages/opentelemetry-propagation-utils?all",
+    "@opentelemetry/propagator-aws-xray": "https://gitpkg.now.sh/NPellet/opentelemetry-js-contrib/propagators/opentelemetry-propagator-aws-xray?all",
     "@opentelemetry/resources": "^1.8.0",
     "@opentelemetry/semantic-conventions": "^1.0.0",
     "@types/aws-lambda": "8.10.81"
